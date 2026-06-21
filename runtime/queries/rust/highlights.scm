@@ -3,7 +3,7 @@
 ; -------
 
 ; We do not style ? as an operator on purpose as it allows styling ? differently, as many highlighters do. @operator.special might have been a better scope, but @special is already documented so the change would break themes (including the intent of the default theme)
-"?" @special
+"?" @keyword.control.return
 
 (type_identifier) @type
 (identifier) @variable
@@ -493,9 +493,9 @@
 (fragment_specifier) @type
 
 (attribute
-  (identifier) @special
+  (identifier) @function.macro
   arguments: (token_tree (identifier) @type)
-  (#eq? @special "derive")
+  (#eq? @function.macro "derive")
 )
 
 (token_repetition_pattern) @punctuation.delimiter
